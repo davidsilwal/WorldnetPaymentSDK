@@ -1,0 +1,8 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="gatewayLiveUrl">https://testpayments.itsco.net/merchant</string>
+  <string name="gatewayTestUrl">https://testpayments.itsco.net/merchant</string>
+  <string name="gatewayDevUrl">https://testpayments.itsco.net/merchant</string>
+  <string name="isvToken"></string>
+  <string name="logFileMaxLines">10000</string>
+</resources>

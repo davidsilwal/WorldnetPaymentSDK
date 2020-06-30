@@ -1,0 +1,103 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x86</Platforms>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="payconfig.xml" />
+    <None Remove="SDK\idtech.dll" />
+    <None Remove="SDK\libcrypto-1_1.dll" />
+    <None Remove="SDK\libcurl.dll" />
+    <None Remove="SDK\libIDTechSDK.dll" />
+    <None Remove="SDK\libssl-1_1.dll" />
+    <None Remove="SDK\libusb-1.0.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="payconfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SDK\idtech.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SDK\libcrypto-1_1.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SDK\libcurl.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SDK\libIDTechSDK.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SDK\libssl-1_1.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SDK\libusb-1.0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="common">
+      <HintPath>SDK\common.dll</HintPath>
+      <Private>true</Private>
+      <Aliases></Aliases>
+    </Reference>
+    <Reference Include="coresdk">
+      <HintPath>SDK\coresdk.dll</HintPath>
+      <Private>true</Private>
+      <Aliases></Aliases>
+    </Reference>
+    <Reference Include="HashLib">
+      <HintPath>SDK\HashLib.dll</HintPath>
+      <Private>true</Private>
+      <Aliases></Aliases>
+    </Reference>
+    <Reference Include="idtech">
+      <HintPath>SDK\idtech.dll</HintPath>
+      <EmbedInteropTypes></EmbedInteropTypes>
+      <Private>true</Private>
+      <Aliases></Aliases>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>SDK\Newtonsoft.Json.dll</HintPath>
+      <Private>true</Private>
+      <Aliases></Aliases>
+    </Reference>
+    <Reference Include="rest-connector-wn">
+      <HintPath>SDK\rest-connector-wn.dll</HintPath>
+      <Private>true</Private>
+      <Aliases></Aliases>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="libcrypto-1_1.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="libcurl.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="libIDTechSDK.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="libssl-1_1.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="libusb-1.0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="NEO2_Devices.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
